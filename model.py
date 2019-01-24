@@ -7,12 +7,24 @@ Base = declarative_base()
 
 # Write your classes here :
 class Artist(Base):
-	 __tablename__ = 'artists'
-    id = Column(Integer, primary_key=True)
-    Genre= Column(String)
-    Name = Column(String)
-    Info = Column(String)
-    Hits= Column(String)
+  __tablename__ = 'artists'
+  id = Column(Integer, primary_key=True)
+  genree = Column(String)
+  name = Column(String)
+  neforma = Column(String)
+  hits = Column(String)
+
+
+
+class User(Base):
+  __tablename__ = 'users'
+  id = Column(Integer, primary_key=True)
+  password = Column(String)
+  username = Column(String)
+ 
+
+
+
     
 
-    pass
+  pass

@@ -2,7 +2,13 @@
 <html>
 <body>
 
-<h1>rocking</h1>
+<h1>how can you survive without {{ genree }}</h1>
+{%for artist in art%}
+<a href="artists/{{ artist.id }}" class="btn btn-primary"> {{ artist.name }}</a>
+{%endfor%}
+
+
+
  
 
 
