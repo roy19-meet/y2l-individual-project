@@ -44,10 +44,10 @@ def create_artist():
 	  name=request.form['name']
 	  neforma=request.form['neforma']
 	  hits=request.files['hits']
-	  if file and allowed_file(file.filename):
+	  if file and allowed_file(hits.filename):
 	  	
-	  	filename = secure_filename(file.filename)
-	  	file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+	  	filename = secure_filename(hits.filename)
+	  	hits.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
 	  	create_artists(genree,name,neforma,url_for('uploaded_file', filename = filename))
 	  return render_template('home.html')
