@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+ul {list-style-type: none;margin: 0;padding: 0;}
+li {display: inline;}
+</style></head>
 <body>
+<ul>
+ <a href=create_artist><input type=”button” value=Create></a>
+ <a href=signup><input type=”button” value=Signup></a>
+ <a href=login><input type=”button” value=Login></a>
+ <a href='hello_world'><input type=”button” value=Home></a>
+ 
+
+</ul> 
 
 <h1>blues is the best</h1>
+{%for artist in art%}
+<a href="artists/{{ artist.id }}" class="btn btn-primary"> {{ artist.name }}</a>
+{%endfor%}
+<img src="/static/blues.gif">
+
+
  
 
 

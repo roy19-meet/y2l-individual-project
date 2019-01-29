@@ -7,12 +7,13 @@ Base = declarative_base()
 
 # Write your classes here :
 class Artist(Base):
-  __tablename__ = 'artists'
+  __tablename__ = 'artists1'
   id = Column(Integer, primary_key=True)
   genree = Column(String)
   name = Column(String)
   neforma = Column(String)
   hits = Column(String)
+
 
 
 

@@ -15,7 +15,12 @@ def function(parameter):
 def create_users(password,username):
   user_object = User(password=password,username=username)
   session.add(user_object)
-  session.commit()    
+  session.commit()
+
+def query_by_username(username):
+  user_object= session.query(User).filter_by(username=username).first()
+  return user_object 
+
 
 def create_artists(genree,name,neforma,hits):
   artist_object = Artist(genree=genree,name=name,neforma=neforma,hits=hits)
@@ -37,6 +42,11 @@ def query_id(the_id):
 def give_me_the_hits(the_hits):
   artists_objects=session.query(Artist).filter_by(hits=the_hits).all()
   return [artist.hits for artist in artists_objects]
+
+
+# def add_like(the_id):
+#   to_like= session.query(Artist).filter_by(the_id=the_id).first()
+#   to_like.like =to_like.like+1  
 
 
 
