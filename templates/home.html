@@ -2,6 +2,66 @@
 <html>
 <head>
 <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f1b509;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1c709}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
 ul {list-style-type: none;margin: 0;padding: 0;}
 li {display: inline;}
 </style>
@@ -21,16 +81,23 @@ li {display: inline;}
 </head>
 <body>
 
-<h1>home page</h1>
- <a href=Rock_page><input type=”button” value=Rock></a>
- <a href=Blues_page><input type=”button” value=Blues></a>
- <a href=Pop_page><input type=”button” value=Pop></a>
- <a href=Hiphop_page><input type=”button” value=Hiphop></a>
+<h1>ıllıllı 🅗🅞🅜🅔 🅟🅐🅖🅔 ıllıllı</h1>
+ 
 <ul>
- <a href=create_artist><input type=”button” value=Create></a>
- <a href=signup><input type=”button” value=Signup></a>
- <a href=login><input type=”button” value=Login></a>
-</ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="signup">Signup</a></li>
+  <li><a href="login">Login</a></li>
+  <li><a href="create_artist">Create</a></li>
+  <li class="dropdown">
+  <li><a href="Blues_page">Blues</a></li>
+  <li><a href="Rock_page">Rock</a></li>
+  <li><a href="Pop_page">Pop</a></li>
+  <li><a href="Hiphop_page">Hiphop</a></li>
+      
+    
+    
+  
+</ul> 
  <form action=/logout method="GET">
  	<button type=”submit” value=Logout>Logout</button> 
 
